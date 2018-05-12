@@ -1,8 +1,8 @@
 <?php
 
-$url = 'https://api.line.me/v2/bot/profile/U126269d84ad11b29dd3be5979c1be03f';
+$url = 'https://api.line.me/v2/bot/profile/Uffa138efe037e6e889d0b0f4a871c005';
 
-$headers = array('Authorization: Bearer ff/Y7DOQEFQL3M8Aow20tzs576rDp4PALLb3gEqDFr2AK1TTEen3eNBmWrmy3Zz9wT+spR/vnrbSEhRzP79EzXZBPVww+DMn6AWMAz4rEQ1EdqxJHrfaQ/RzeKXyRb9RM4BZOlokBAVrlDvzRK17IgdB04t89/1O/w1cDnyilFU=
+$headers = array('Authorization: Bearer 3ALKAbKFoGuJyJnoDdn0HeyfbxLFtEXBKiC0lFeoNl/XbL4WhoCZzefp2n7UDuXaCWfErIDro07BnZNggJmXJChXTIlMPo8LRJ+n1LEgbRUaKehDkiCr5p5CakHrPX+gauOGX/R5bB2e5yi7xjnHDAdB04t89/1O/w1cDnyilFU=
 ');
 
 $ch = curl_init($url);
