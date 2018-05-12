@@ -26,8 +26,9 @@ if ($res->isSucceeded()) {
     $statusMessage = $profile['statusMessage'];
     $pictureUrl = $profile['pictureUrl'];
 }
+echo $displayName;
 
-$response = $bot->pushMessage($pushID, $statusMessage);
+$response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
