@@ -14,6 +14,25 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+
+$bot = new \LINE\LINEBot(new CurlHTTPClient($access_token), [
+    'channelSecret' => $channelSecret
+]);
+
+$res = $bot->getProfile($pushID);
+if ($res->isSucceeded()) {
+    $profile = $res->getJSONDecodedBody();
+    $displayName = $profile['displayName'];
+    $statusMessage = $profile['statusMessage'];
+    $pictureUrl = $profile['pictureUrl'];
+}
+$textMessageBuilder.="\n";
+$textMessageBuilder.=$displayName;
+$textMessageBuilder.="\n";
+$textMessageBuilder.=$statusMessage;
+$textMessageBuilder.="\n";
+$textMessageBuilder.=$pictureUrl;
+
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
